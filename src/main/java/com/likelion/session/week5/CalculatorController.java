@@ -16,12 +16,7 @@ public class CalculatorController {
     public int addTwoNumbers(CalculatorAddRequest request){
         return calculatorService.add(request.getNumber1(), request.getNumber2());
     }
-//    public int addTwoNumbers(
-//            @RequestParam int number1,
-//            @RequestParam int number2
-//        ){
-//            return number1 + number2;
-//    }
+    
     @PostMapping("/sub")
     public int subTwoNumbers(@RequestBody CalculatorSubRequest request){
         return calculatorService.sub(request.getNumber1(), request.getNumber2());
